@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Jost', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top left,
+    #2b2b2b,
+    #5a5a5a,
+    #b5b5b5);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 30px;
+    background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    position:relative;
+}
+
+
+.header-logo h2{
+    font-size:22px;
+}
+
+
+.content-header{
+    display:flex;
+    gap:35px;
+    list-style:none;
+    z-index: 999;
+}
+
+.content-header a{
+    position:relative;
+    text-decoration:none;
+    color:#000;
+    font-size:17px;
+    font-weight: bold;
+}
+
+
+.content-header a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#000;
+    transition:width 0.3s ease;
+}
+
+.content-header a:hover::after{
+    width:100%;
+}
+
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+}
+
+
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .content-header{
+        display:none;
+        position:absolute;
+        top:80px;
+        right:0;
+        width:100%;
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+        padding:30px 0;
+        background:#fff;
+        box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .content-header.active{
+        display:flex;
+    }
+}
+
+.information-initial {
+    text-align: center;
+    margin: 100px;
+}
+
+.information-initial .content-information {
+    color: #fff;
+    font-weight: bold;
+}
+
+.content-information {
+    color:#fff;
+    font-weight:bold;
+    opacity: 0;
+    transform: translateY(60px);
+    animation: subir 1s ease forwards;
+}
+
+@keyframes subir{
+
+    from{
+        opacity:0;
+
+        transform:translateY(60px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+.information-initial .imagen {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.information-initial h2 {
+    margin: 20px;
+    font-size: 45px;
+}
+
+.information-initial p {
+    margin: 20px;
+    font-size: 17px;
+}
+
+.information-initial .button {
+    padding: 20px;
+    width: 130px;
+    background-color: #2b2b2b;
+    border: 1px solid #2b2b2b;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    animation: pulse 2s infinite;
+}
+
+/* JJAAJA */
+@keyframes pulse{
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.08);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.information-initial .button:hover {
+    background-color: #5f8dc0;
+    border: 1px solid #5f8dc0;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+
+    .content-header {
+        gap: 50px;
+    }
+
+    .information-initial {
+        margin-top: 60px;
+        padding: 20px;
+    }
+
+    .information-initial h2 {
+        font-size: 38px;
+    }
+
+    .information-initial p {
+        font-size: 19px;
+        padding-bottom: 20px;
+    }
+
+    .information-initial .imagen {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .header {
+        padding: 20px;
+    }
+
+    .header-logo h2 {
+        font-size: 18px;
+    }
+
+    .content-header {
+        gap: 50px;
+    }
+
+    .information-initial {
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    .information-initial h2 {
+        font-size: 30px;
+    }
+
+    .information-initial p {
+        font-size: 15px;
+    }
+
+    .information-initial .imagen {
+        width: 220px;
+        height: 220px;
+    }
+
+    .information-initial .button {
+        width: 120px;
+        padding: 15px;
+        font-size: 13px;
+    }
+}
