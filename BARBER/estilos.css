@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
 
 *{
     margin:0;
@@ -9,13 +11,11 @@
 body{
     font-family:'Jost', sans-serif;
     margin: 0;
-    height: 100vh;
     background: radial-gradient(circle at top left,
     #2b2b2b,
     #5a5a5a,
     #b5b5b5);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 
 
@@ -120,8 +120,7 @@ body{
 @keyframes subir{
 
     from{
-        opacity:0;
-
+        opacity: 0;
         transform:translateY(60px);
     }
 
@@ -252,3 +251,91 @@ body{
     }
 }
 
+
+.cards {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.cards .cardsContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cards .cardsContent .card {
+    background-color: #3a3a3a;
+    padding: 24px;
+    width: 100%;
+    max-width: 330px;
+    margin: auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);;
+}
+
+.cards .cardsContent .card h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    padding: 10px;
+    color: #fff;
+}
+
+.cards .cardsContent .card .estrellas {
+    color: #9fd28d;
+    font-size: 20;
+}
+
+.cards .cardsContent .card .tallas a {
+    background-color: #9fd28d;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.cards .cardsContent .card .tallas a:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    transition: 1s ease;
+}
+
+.cards .cardsContent .card p {
+    color: #c4c4c4;
+}
+
+.cards .botonesCard button {
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    padding: 10px;
+    width: 120px;
+}
+
+.cards .botonesCard button:hover {
+    background-color: #5a5a5a;
+    border: 1px solid #5a5a5a;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .cards .cardsContent {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        padding: 0 30px;
+        column-gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards .cardsContent {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+}
