@@ -339,3 +339,7 @@ body{
         row-gap: 50px;
     }
 }
+
+.cardFormulario {
+    background-color: #5f8dc0;
+}

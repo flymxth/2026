@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Barberia Y Estilos</title>
+    <title>Citas</title>
 </head>
 <body>
-    
     <div class="header">
         <div class="header-logo"><h2>CUSTODIO BARBER</h2></div>
         <div class="menu-toggle" id="menu-toggle">
@@ -21,19 +20,26 @@
         </ul>
     </div>
 
+    <div class="cardFormulario">
+        <div class="cardFormularioContainer">
+            <h1>AGENDA TU CITA</h1>
+            <form action="citas.php" method="post" id="Formulario">
+                <label for="">Nombre: </label>
+                <input class="txtNobre" id="Nombre" type="text">
+                <br>
+                <label for="">Apellidos: </label>
+                <input class="txtApellidos" id="Apellidos" type="text">
+                <br>
+                <label for="">Email: </label>
+                <input class="txtEmail" id="Email" type="email">
+                <br>
+                <label for="">Password: </label>
+                <input class="txtPassword" id="Password" type="password">
 
-    <div class="information-initial">
-        <div class="content-information">
+                <br><br>
 
-            <img class="imagen" src="images/fotomia.jpeg" alt="">
-            <h2>¡Bienvenido!</h2>
-
-            <div>
-                <p>¡Agenda tu cita ahora presionando este boton!</p>
-            </div>
-
-            <form action="Citas.html">
-                <button class="button">Crear <ion-icon name="exit-outline"></ion-icon></button>
+                <button type="submit">Agregar</button>
+                <button type="reset">Eliminar</button>
             </form>
         </div>
     </div>
